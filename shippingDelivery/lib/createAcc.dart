@@ -13,7 +13,7 @@ Future<Album> createAlbum(String email, String password, String name,
   }
 
   final http.Response response = await http.post(
-    Uri.parse('http://localhost:3000/account/signup'),
+    Uri.parse('https://shippingdelivery.onrender.com/account/signup'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
