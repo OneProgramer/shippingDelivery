@@ -5,7 +5,7 @@ import 'dart:convert';
 
 Future<Albums> createAlbum(String productName) async {
   final http.Response response = await http.post(
-    Uri.parse('http://localhost:3000/product/buy'),
+    Uri.parse('https://shippingdelivery.onrender.com/product/buy'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
@@ -42,7 +42,7 @@ class Album {
 }
 
 Future<Album> fetchAlbum() async {
-  final response = await http.get(Uri.parse('http://localhost:3000/product'));
+  final response = await http.get(Uri.parse('https://shippingdelivery.onrender.com/product'));
 
   return Album.fromJson(jsonDecode(response.body));
 }
