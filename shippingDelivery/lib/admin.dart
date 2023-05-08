@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 Future<Album> createAlbum(
     String productName, String price, String location, String quantity) async {
   final response = await http.post(
-    Uri.parse('http://localhost:3000/product'),
+    Uri.parse('https://shippingdelivery.onrender.com/product/'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
